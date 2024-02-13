@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Internship Application</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="script.js"></script>
+  </head>
+  <body>
+    
+
+
+    <div class="desktop">
+      <!-- Navbar -->
+      <div class="navbar" id="nav"> 
+        <div class="img-nav"><img src="https://www.up.ac.th/icon/up.png" alt=""></div>
+        <div class="nav-links">
+            <div class="nav-link">Home
+                <div class="dropdown">
+                    <a href="javascript:void(0)" onclick="scrollToNew(event)">Try Travel</a>
+                    <a href="javascript:void(0)" onclick="scrollToport()">Port</a>
+                    <a href="javascript:void(0)" onclick="scrollTofooter()" >About as</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+      <!-- Navbar -->
+
+      <!-- Picture left -->
+      <div class="container">
+        <div class="left-panel">
+          <div class="slide-show">
+            <img class="panel-content" src="img_inturn/UNIversity2/2.svg" />
+          </div>
+
+            <div class="slide-show">
+            <img class="panel-content" src="img_inturn/UNiversity (1).svg" />
+          </div>
+
+          <div class="slide-show">
+            <img class="panel-content" src="img_inturn/UNIversity2/3.svg" />
+          </div>
+
+          <div class="slide-show">
+            <img class="panel-content" src="img_inturn/UNIversity2/4.svg" />
+          </div>
+
+          <div class="slide-show">
+            <img class="panel-content" src="img_inturn/UNIversity2/5.svg" />
+          </div>
+          
+          <div class="dots-container">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+        </div>
+        </div>
+      </div>
+      
+      <script>
+        var slideIndex = 1;
+var slideInterval;
+
+document.addEventListener("DOMContentLoaded", function() {
+    showSlides(slideIndex);
+    slideInterval = setInterval(nextSlide, 7000); // เรียกใช้ nextSlide() โดยอัตโนมัติทุก 7 วินาที
+});
+
+function showSlides(n) {
+    var i;
+    var slides = document.querySelectorAll(".slide-show .panel-content");
+    var dots = document.querySelectorAll(".dot");
+
+    if (n > slides.length) { 
+        slideIndex = 1;
+    }
+    if (n < 1) { 
+        slideIndex = slides.length;
+    }
+
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+}
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+    clearInterval(slideInterval); // หยุดการเรียกใช้งาน setInterval เมื่อมีการกดปุ่มสไลด์
+    slideInterval = setInterval(nextSlide, 2000); // เรียกใช้ nextSlide() อีกครั้งหลังจากคลิกแล้ว
+}
+
+function nextSlide() {
+    showSlides(slideIndex += 1);
+}
+    </script>
+
+    <div id="new-update-section">
+        <!-- Highlighted News Section -->
+      <div class="highlight-section"> <!--Start-->  
+          <div class="highlight-header"> <!--start head-->
+            <h1>Try Travel</h1>
+          </div>  <!--End head-->
+         <div class="highlight-content-container"> <!--start content-->
+              <div class="highlight-content-container-block"> <!--Start content container block-->
+              <div class="highlight-content"> 
+                <img
+                  class="img-item"
+                  src="img_inturn/page1.jpg"
+                />
+              </div>
+              <div class="content-block">
+                <h1>Login Page</h1>
+              </div>
+              </div> <!--End content container block-->
+
+              <div class="highlight-content-container-block"> <!--Start content container block-->
+                <div class="highlight-content">
+                  <img
+                    class="img-item"
+                    src="img_inturn/หน้าหลัก.jpg"
+                  />
+                </div>
+                <div class="content-block">
+                  <h1>Main Page</h1>
+                </div>
+              </div><!--End content container block-->
+
+              <div class="highlight-content-container-block"> <!--Start content container block-->
+                <div class="highlight-content">
+                  <img
+                    class="img-item"
+                    src="img_inturn/ภาคกลาง.jpg"
+                  />
+                </div>
+                <div class="content-block">
+                  <h1>Secondary page</h1>
+                </div>
+              </div>
+
+              <div class="highlight-content-container-block"> <!--Start content container block-->
+                <div class="highlight-content">
+                  <img
+                    class="img-item"
+                    src="img_inturn/forgot password1.jpg"
+                  />
+                </div>
+                <div class="content-block">
+                  <h1>Forgot Password</h1>
+                </div>
+              </div> 
+         </div> <!--End content container-->
+      </div><!--End-->
+    </div>
+    <!-- News Section -->
+
+
+    <!--PFN-->
+    <div id="port">
+    <div class="pfn">
+      <div class="pfn-c">
+        
+        <div class="pfn-c-img">
+          <img src="img_inturn/MacBook Pro 16.jpg" alt="">
+        </div>
+      
+
+        <div class="pfn-c-section">
+          <div class="pfn-c-text">
+            <div class="text-pfn">
+              <h1>Redesign</h1>
+              <br>
+              <h2>รับหน้าที่ออกแบบ UI ใหม่ ดูแลเรื่องขององค์ประกอบและปรับสมดุลของสีใหม่ทั้งหมด
+                ออกแบบ Wireframe เรียนรู้วิธีการทำงานแบบ Scrum
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--PFN-->
+
+    <!--PFN2-->
+    <div class="pfn2">
+      <div class="pfn-c-section2">
+        <div class="pfn-c-text2">
+          <div class="text-pfn2">
+            <h1>Try Travel - Desktop</h1>
+              <br>
+              <h2>ดูแลในส่วนของ UX/UI มีการออกแบบปรับเปลี่ยน Layout จาก Mobile มาเป็น Desktop มีการเชื่อมต่อ Prototype ภายใน Website</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="pfn-c2">
+        
+          <div class="pfn-c-img2">
+            <img src="img_inturn/MacBook Pro 16(4).jpg" alt="">
+          </div>
+      </div>
+    </div>
+    <!--PFN2-->
+
+    <!--PFN-->
+    <div class="pfn">
+      <div class="pfn-c">
+        
+        <div class="pfn-c-img">
+          <img src="img_inturn/iPhone 13 Pro.jpg" alt="">
+        </div>
+     
+
+        <div class="pfn-c-section">
+          <div class="pfn-c-text">
+            <div class="text-pfn">
+              <h1>Try Travel - Mobile App</h1>
+              <br>
+              <h2>แอพพลิเคชั่นแนะนำสถานที่ท่องเที่ยวในประเทศไทย เรียนรู้การทำ ER-diagram การเก็บ Requirement จากผู้ใช้งาน การออกแบบ Wireframe และ UI สำหรับ Mobile 
+
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--PFN-->
+
+    <!-- Video Section -->
+    
+      <!-- Vision Section -->
+
+      <!--Footer-->
+  <div id="footer">
+    <div class="Footer">
+      <div class="Footer-text">
+        <h1>Nontaphat Meesri</h1>
+        <h2>Create by</h2>
+      </div>
+      <div class="Footer-container-img">
+        <div class="Footer-container-img-group">
+          <div class="Footer-container-img-group1">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/640px-HTML5_logo_and_wordmark.svg.png">
+          </div>
+          <div class="Footer-container-img-group1">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png">
+          </div>
+          <div class="Footer-container-img-group1">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/768px-JavaScript-logo.png">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="Footer-contect">
+      <div class="Footer-contect-text">
+        <h1>About as</h1>
+        <h2>Email:Nontaphat.mee@gmail.com</h2>
+      </div>
+      <div class="Footer-contect-img">
+        <a href="https://www.facebook.com/nontaphat.meesri" class="image-link">
+          <img src="img_inturn/Facebook_Logo_(2019).png.webp" alt="Description of the image">
+        </a>
+
+        <a href="https://www.linkedin.com/in/nontaphat-mee/" class="image-link">
+        <img src="img_inturn/LinkedIn_icon_circle.svg.webp" alt="Description of the image">
+        </a>
+      </div>
+    </div>
+  </div>
+      <!--Footer-->
+    </div>
+  </body>
+</html>

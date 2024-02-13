@@ -1,0 +1,492 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*, *::before, *::after {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   table-layout: auto;
+}
+
+@media only screen and (max-width: 1023px) {
+   .highlight-content-container-block {
+      width: calc(50% - 20px); /* แบ่งพื้นที่ Container เป็น 2 ส่วนเมื่อขนาดหน้าจอเล็กลง */
+   }
+}
+
+@media only screen and (max-width: 767px) {
+   .highlight-content-container-block {
+      width: calc(100% - 20px); /* ให้ Container เต็มขนาดเมื่อขนาดหน้าจอเล็กลง */
+   }
+}
+
+.desktop{
+   display: inline;
+}
+
+body {
+   .roboto-thin {
+      font-family: "Roboto", sans-serif;
+      font-weight: 100;
+      font-style: normal;
+    }
+    
+    .roboto-thin-italic {
+      font-family: "Roboto", sans-serif;
+      font-weight: 100;
+      font-style: italic;
+    }
+    
+    .roboto-light {
+      font-family: "Roboto", sans-serif;
+      font-weight: 300;
+      font-style: normal;
+    }
+    
+    .roboto-light-italic {
+      font-family: "Roboto", sans-serif;
+      font-weight: 300;
+      font-style: italic;
+    }
+    
+    .roboto-regular {
+      font-family: "Roboto", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+    
+    .roboto-regular-italic {
+      font-family: "Roboto", sans-serif;
+      font-weight: 400;
+      font-style: italic;
+    }
+    
+    .roboto-medium {
+      font-family: "Roboto", sans-serif;
+      font-weight: 500;
+      font-style: normal;
+    }
+    
+    .roboto-medium-italic {
+      font-family: "Roboto", sans-serif;
+      font-weight: 500;
+      font-style: italic;
+    }
+    
+    .roboto-bold {
+      font-family: "Roboto", sans-serif;
+      font-weight: 700;
+      font-style: normal;
+    }
+    
+    .roboto-bold-italic {
+      font-family: "Roboto", sans-serif;
+      font-weight: 700;
+      font-style: italic;
+    }
+    
+    .roboto-black {
+      font-family: "Roboto", sans-serif;
+      font-weight: 900;
+      font-style: normal;
+    }
+    
+    .roboto-black-italic {
+      font-family: "Roboto", sans-serif;
+      font-weight: 900;
+      font-style: italic;
+    }
+   
+}
+
+.img-nav{
+   padding-left: 20px;
+}
+
+.navbar {
+   background-color: #a882f6; /* ปรับสีพื้นหลังของ Navbar */
+   text-align: center;
+   height: 100px;
+   display: flex;
+   align-items: center;
+   justify-content:space-between;
+   padding-right: 200px;
+   z-index: 1000;
+   position: sticky; /* เพิ่มบรรทัดนี้ */
+   transition: top 0.3s, opacity 0.3s; /* เพิ่มการเปลี่ยนแปลงอย่างสวยงาม */
+}
+
+.navbar.hidden {
+   top: 0; /* ทำให้ navbar หยุดที่ด้านบนของหน้าจอเมื่อซ่อน */
+}
+
+.nav-link {
+   color: #FFF; /* ปรับสีข้อความของ Navbar */
+   font-size: 1.5rem;
+   margin: 0 20px;
+   text-decoration: none;
+   font-size: 1.75rem;
+}
+.nav-link:hover {
+   color:#F5E866;
+}
+
+.highlight-content-container{
+   display: flex;
+   padding: 50px;
+}
+
+.highlight-content-container-block{
+   box-sizing: border-box;
+   margin: 0;
+   padding: 30px;
+   max-width: calc(100% /4);
+   width:100%;  
+}
+
+.img-item{
+   height: 123px;
+   border-radius: 30px;
+}
+
+
+.highlight-content {
+   max-width: 100%;
+   width: 100%;
+   height: auto;
+}
+
+.highlight-content img {
+   width: 100%;
+   height: 744px;
+}
+
+.multiple-itmes{
+   display: flex;
+}
+
+.highlight-content-container-block .content-block  {
+   width: 100%;
+}
+
+.highlight-content-container-block .content-block h4{
+   max-width: 100%;
+
+}
+
+.highlight-section{
+   display: flex;
+   max-width: 100vw;
+   flex-direction: column;
+}
+
+.content-block{
+
+}
+
+.news-header,
+.highlight-header {
+   color:#a882f6;
+   text-align: center;
+   padding-top: 100px;
+   font-size: 1.50rem;
+   line-height: 50px;
+   
+}
+
+.news-container,
+.highlight-container {
+   width: 100%;
+   max-height: 500px;
+   background-color: #fff;
+   border: 1px solid #ddd;
+   overflow-y: auto;
+}
+
+.news-item {
+   padding: 15px;
+   border-bottom: 1px solid #ddd;
+}
+
+.container {
+   position: relative;
+ }
+
+ .slide-show {
+   position: relative;
+ }
+
+ .slide-show .panel-content {
+   transition: opacity 1s ease;
+}
+
+ .dot {
+   cursor: pointer;
+   height: 15px;
+   width: 15px;
+   margin: 0 5px;
+   background-color: #bbb;
+   border-radius: 50%;
+   display: inline-block;
+   transition: background-color 0.3s ease;
+}
+
+.dots-container {
+   text-align: center;
+   position: relative;
+   top: -2rem;
+}
+
+.active {
+   background-color: #a882f6;
+}
+
+ .panel-content {
+   display: block;
+   position: relative;
+}
+
+.content-block h1{
+   color: #a882f6;
+   margin-top: 20px;
+   text-align: center;
+}
+.content-block h3{
+   color: #808080;
+}
+.content-block h4{
+   color: #a882f6;
+   text-align: right;
+   padding-top: 100px;
+   font-size: 1.7rem;
+}
+
+.nav-links {
+   display: flex;
+}
+
+.nav-link {
+   position: relative;
+   padding: 10px;
+   cursor: pointer;
+}
+
+.dropdown {
+   display: none;
+   position: absolute;
+   top: 100%;
+   left: 0;
+   background-color: #333;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   z-index: 3px;
+}
+
+.dropdown :hover{
+   background-color: #bababa;
+}
+
+.dropdown a {
+   display: block;
+   padding: 20px;
+   color:#a882f6 ;
+   text-decoration: none;
+   width: 300px;
+   height: auto;
+   padding: 15px;
+   background-color: #ffffff;
+   border-bottom: #c6c6c6 solid 0.5px ;
+   text-align: left;
+}
+
+/* Hover Styles */
+.nav-link:hover .dropdown {
+   display: block;
+}
+
+.Footer{
+   display: flex;
+   background-color: #a882f6;
+   flex-direction: column;
+   height: 420px;
+}
+
+.Footer-text {
+   width: auto;
+   height: auto;
+   display: flex;
+   text-align: center;
+   justify-content: center;
+   flex-direction: column;
+   margin-top: 50px;
+}
+
+.Footer-text h1{
+   font-size: 3rem;
+   color: #ffffff;
+}
+.Footer-text h2{
+   font-size: 2rem;
+   margin-top: 30px;
+   color: #ffffff;
+
+}
+
+.Footer-container-img-group{
+   width: 100%;
+   height: 150px;
+   display: flex;
+   gap: 302px;
+   justify-content: center;
+   margin-top: 50px;
+   margin-bottom: 20px;
+
+}
+
+.Footer-container-img-group1 img{
+   width: 100%;
+   height: 100%;
+   
+}
+
+.Footer-contect{
+   flex-direction: column;
+   display: flex;
+   text-align: center;
+}
+
+
+.Footer-contect-text h1{
+   align-items: center;
+   justify-content: center;
+   color: #a882f6;
+   font-size: 3rem;
+   margin-top: 40px;
+   margin-bottom: 20px;
+}
+
+.Footer-contect-text h2{
+   font-size: 2rem;
+   color: #000000;
+   margin-bottom: 20px;
+}
+
+.Footer-contect-img{
+   display: flex;
+   justify-content: center; /* จัดให้อยู่กึ่งกลางตามแนวนอน */
+   align-items: center; /* จัดให้อยู่กึ่งกลางตามแนวดิ่ง */
+   margin: 30px;
+   gap: 50px;
+}
+
+.Footer-contect-img img{
+   width: 80px;
+   height: 80px;
+   margin: 10px;
+}
+
+.popup {
+   display: none;
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   padding: 20px;
+   background-color: white;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+   z-index: 4;
+}
+
+.pfn{
+   display: flex;
+   margin: 30px;
+}
+
+.pfn-c-img img{
+   max-width: 1750px;
+   max-height: 750px;
+   object-fit: contain; /* หรือ contain, fill, เป็นต้น */
+ }
+
+.pfn-c{
+   display: flex;
+   width: auto;
+   height: auto;
+}
+
+.pfn-c-con-img{
+   width: 1500px;
+}
+
+.pfn-c-img .img{ 
+   width: 1000px;
+   height: 200px;
+}
+
+.pfn-c-section{
+   display: flex;
+}
+
+.pfn-c-text{
+   padding-top: 100px;
+   margin-right: 50px;
+   margin-left: 50px;
+}
+.pfn2{
+   display: flex;
+   margin: 30px;
+}
+
+.pfn-c-section2{
+   display: flex;
+}
+
+.pfn-c-text2{
+   padding: 100px;
+}
+.pfn-c2{
+   display: flex;
+   width: auto;
+   height: auto;
+}
+
+.pfn-c-con-img2{
+   width: 1000px;
+   
+}
+.pfn-c-img2 img {
+   max-width: 1750px;
+   max-height: 750px;
+ }
+
+.text-pfn h1{
+   font-size: 3rem;
+   color: #a882f6;
+}
+.text-pfn2 h1{
+   font-size: 3rem;
+   color: #a882f6;
+}
+.text-pfn h2{
+   font-size: 2rem;
+   color:#808080;
+}
+.text-pfn2 h2{
+   font-size: 2rem;
+   color:#808080;
+}
+
+.highlight-content-container-block:hover .highlight-content {
+   transform: translateY(-50px); /* เลื่อนขึ้นของกล่องรูป */
+ }
+ 
+ .highlight-content-container-block:hover .content-block {
+   transform: translateY(-50px); /* เลื่อนขึ้นของข้อความ */
+ }
+ .highlight-content-container-block .highlight-content,
+ .highlight-content-container-block .content-block {
+   transition: transform 0.3s ease; /* ทำให้เกิดการเคลื่อนไหวอย่างสม่ำเสมอเมื่อ hover */
+ }
+  
+
+
+
+
